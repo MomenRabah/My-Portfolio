@@ -76,7 +76,7 @@ export const EDUCATION = [
 
 export const PROJECTS = [
   {
-    title: "Full-Stack-Todo-List",
+    title: "Full-Stack Todo List",
     description:
       "A ToDo List application built with React, Express, MongoDB, React Query and React Router. Users can create, edit, and delete tasks with a simple Dashboard",
     technologies: ["React JS", "JavaScript", "Node.js", "MongoDB" , "etc..."],
@@ -84,7 +84,7 @@ export const PROJECTS = [
     image: todolist
   },
   {
-    title: "ToDo-List-Application",
+    title: "Authenticated Crud Applecation",
     description:
       "A To-Do List application built with React, Supabase, React Query, and React Router. Authenticated users can create, edit, and delete their tasks.",
     technologies: ["React JS", "Supabase", "ReactQuery", "etc..."],
@@ -92,7 +92,7 @@ export const PROJECTS = [
     image: todolist
   },
   {
-    title: "Automotive-Workshop-Management-System",
+    title: "Automotive Workshop Management System",
     description:
       "a streamlined application for managing customer cases, vehicle orders, and service records in automotive workshops. It enhances workflow efficiency and improves customer satisfaction through organized case and order handling.",
     technologies: ["Python"],
