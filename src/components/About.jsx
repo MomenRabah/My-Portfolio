@@ -7,7 +7,7 @@ function About() {
       <h2 className='mt-14 mb-4 text-center text-4xl'>About me</h2>
       <div className='flex justify-center'>
         <div className='flex w-full max-w-4xl p-4 flex-col space-y-6'>
-          <p className='text-left text-justify  lg:text-justify leading-relaxed'>
+          <p className='text-left lg:text-justify leading-relaxed'>
             {ABOUT_TEXT}
           </p>
         </div>
