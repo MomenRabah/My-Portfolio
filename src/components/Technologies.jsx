@@ -7,7 +7,7 @@ import { SiFigma } from 'react-icons/si';
 import { FaPython } from 'react-icons/fa';
 import { SiAdobe } from 'react-icons/si';
 import { motion } from "framer-motion"
-
+import { SiPostgresql } from 'react-icons/si'; 
 const iconVariants = (duration)=>({
   initial: { y: -5},
   animate: {
@@ -39,7 +39,7 @@ function Technologies() {
         initial="initial"
         animate="animate"
         className='rounded-2xl border-2 border-[#0a283d] p-2'>
-          <SiMongodb className='text-5xl text-green-500'/>
+          <SiPostgresql className='text-5xl text-sky-600'/>
         </motion.div>
 
         <motion.div
