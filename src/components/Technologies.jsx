@@ -41,7 +41,13 @@ function Technologies() {
         className='rounded-2xl border-2 border-[#0a283d] p-2'>
           <SiPostgresql className='text-5xl text-sky-600'/>
         </motion.div>
-
+        <motion.div 
+        variants={iconVariants(3)}
+        initial="initial"
+        animate="animate"
+        className='rounded-2xl border-2 border-[#0a283d] p-2'>
+          <SiMongodb className='text-5xl text-green-500'/>
+        </motion.div>
         <motion.div
         variants={iconVariants(3.5)}
         initial="initial"
