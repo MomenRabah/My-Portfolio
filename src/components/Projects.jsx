@@ -15,7 +15,7 @@ function Projects() {
             </div>
             <div className=' w-full mt-14 max-w-xl lg:w-3/4'>
               <h6 className='mb-2 font-semibold'>{project.title}</h6>
-              <p className='mb-4 font-light tracking-tighter text-justify'>{project.description}</p>
+              <p className='mb-4 font-light tracking-tight text-justify'>{project.description}</p>
               {project.technologies.map((tech, index)=>(
                         <span key={index} className='flex-wrap mr-2 mt-4 rounded bg-[#3ccf4e] px-2 py-1 text-sm font-medium text-white'>{tech}</span>
                     ))}

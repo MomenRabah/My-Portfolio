@@ -34,7 +34,7 @@ function Hero() {
             variants={container(0.5)}
             initial="hidden"
             animate="visible"
-            className='my-2 max-w-xl py-6 font-light tracking-tighter text-justify'>{HERO_CONTENT}
+            className='my-2 max-w-xl py-6 font-light tracking-tight text-justify'>{HERO_CONTENT}
           </motion.p>
         </div>
 
