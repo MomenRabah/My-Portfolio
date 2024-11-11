@@ -13,15 +13,19 @@ function Projects() {
             <div className='w-full lg:w-1/4'>
             <img src={project.image} alt={project.title} className='mb-6 rounded hidden lg:block'/>
             </div>
-            <div className='w-full mt-16 max-w-xl lg:w-3/4'>
+            <div className=' w-full mt-14 max-w-xl lg:w-3/4'>
               <h6 className='mb-2 font-semibold'>{project.title}</h6>
-              <p className='mb-4 font-light'>{project.description}</p>
+              <p className='mb-4 font-light tracking-tighter text-justify'>{project.description}</p>
+              {project.technologies.map((tech, index)=>(
+                        <span key={index} className='flex-wrap mr-2 mt-4 rounded bg-[#3ccf4e] px-2 py-1 text-sm font-medium text-white'>{tech}</span>
+                    ))}
+              
               
               <a
                 href={project.github}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-[#3ccf4e] hover:underline'
+                className=' text-[#3ccf4e] hover:underline block mt-4'
               >
                 View on GitHub
               </a>

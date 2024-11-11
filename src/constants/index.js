@@ -79,7 +79,7 @@ export const PROJECTS = [
     title: "Full-Stack Todo List",
     description:
       "A ToDo List application built with React, Express, MongoDB, React Query and React Router. Users can create, edit, and delete tasks with a simple Dashboard",
-    technologies: ["React JS", "JavaScript", "Node.js", "MongoDB" , "etc..."],
+    technologies: ["React JS", "Node.js", "MongoDB" ],
     github: 'https://github.com/MomenRabah/Full-Stack-Todo-List.git',
     image: todolist
   },
@@ -87,7 +87,7 @@ export const PROJECTS = [
     title: "Authenticated Crud Applecation",
     description:
       "A To-Do List application built with React, Supabase, React Query, and React Router. Authenticated users can create, edit, and delete their tasks.",
-    technologies: ["React JS", "Supabase", "ReactQuery", "etc..."],
+    technologies: ["React JS", "Supabase", "ReactQuery"],
     github: 'https://github.com/MomenRabah/ToDo-List-Application.git',
     image: todolist
   },

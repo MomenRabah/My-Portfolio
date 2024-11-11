@@ -14,7 +14,7 @@ function Experience() {
                     <h6 className='mb-2 font-semibold'>
                         {experience.role} - <span className='text-sm'>{experience.company}</span>
                     </h6>
-                    <p className='mb-4 font-light text-navy-800'>{experience.description}</p>
+                    <p className='mb-4 font-light text-navy-800 tracking-tighter text-justify'>{experience.description}</p>
                     {experience.technologies.map((tech, index)=>(
                         <span key={index} className='mr-2 mt-4 rounded bg-[#3ccf4e] px-2 py-1 text-sm font-medium text-white'>{tech}</span>
                     ))}

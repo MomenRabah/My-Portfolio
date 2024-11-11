@@ -22,13 +22,13 @@ function Hero() {
             variants={container(0)}
             initial="hidden"
             animate="visible"
-            className='pb-16 text-4xl font-thin tracking-tight lg:mt-16 lg:text-6xl'>Moamen Rabah</motion.h1>
+            className='pb-12 text-4xl font-thin tracking-tight lg:mt-16 lg:text-6xl'>Moamen Rabah</motion.h1>
           <motion.span
             variants={container(0.2)}
             initial="hidden"
             animate="visible"
             className='bg-gradient-to-r from-[#4fdf60] via-[#039016] to-[#3ccf4e] bg-clip-text text-4xl tracking-tight text-transparent'>
-            Software Engineer
+            Software Developer
           </motion.span>
           <motion.p
             variants={container(0.5)}
@@ -38,11 +38,11 @@ function Hero() {
           </motion.p>
         </div>
 
-        <div className='w-full lg:w-1/2 lg:p-4 flex items-center justify-center relative'>
+        <div className='w-full lg:w-1/2 lg:p-4 flex items-center justify-center '>
           <div className="relative z-10">
             <img
               width="250"
-              className='rounded-full'
+              className='rounded-full mt-7 mb-12'
               src={profileImage}
               alt='personal profile img'
             />

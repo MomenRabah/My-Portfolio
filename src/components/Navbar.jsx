@@ -9,7 +9,7 @@ function Navbar() {
       <div className="flex flex-shrink-0 items-center">
         <img className="mx-2 w-10" src={logo} alt="logo" />
       </div>
-      <div className=' items-center gap-4 hidden md:flex'>
+      <div className=' items-center gap-8 hidden md:flex'>
       <Link
           to="hero"
           smooth={true}
