@@ -84,7 +84,7 @@ export const PROJECTS = [
     image: todolist
   },
   {
-    title: "Authenticated Crud Applecation",
+    title: "Authenticated Crud application",
     description:
       "A To-Do List application built with React, Supabase, React Query, and React Router. Authenticated users can create, edit, and delete their tasks.",
     technologies: ["React JS", "Supabase", "ReactQuery"],
