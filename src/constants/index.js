@@ -76,6 +76,14 @@ export const EDUCATION = [
 
 export const PROJECTS = [
   {
+    title: "Java + SQLite project",
+    description:
+      "This project is a Inventory Management System developed using Java and SQLite, designed to manage storage units and products.",
+    technologies: ["Java","SQLite"],
+    github: 'https://github.com/MomenRabah/Java-SQLite-project',
+    image: warehouse
+  },
+  {
     title: "Full-Stack Todo List",
     description:
       "A ToDo List application built with React, Express, MongoDB, React Query and React Router. Users can create, edit, and delete tasks with a simple Dashboard",
@@ -98,14 +106,6 @@ export const PROJECTS = [
     technologies: ["Python"],
     github: 'https://github.com/MomenRabah/Automotive-Workshop-Management-System.git',
     image: workshop
-  },
-  {
-    title: "Warehouses & product management",
-    description:
-      "This system allows users to manage storage units and products, with features to add, update, and track items, along with action history. It's ideal for efficient inventory management.",
-    technologies: ["C++"],
-    github: 'https://github.com/MomenRabah/cs-project.git',
-    image: warehouse
   },
 ];
 
