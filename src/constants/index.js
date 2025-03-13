@@ -9,9 +9,15 @@ export const ABOUT_TEXT= `I am an aspiring software developer with a strong foun
 
 
 export const EXPERIENCES = [
-
   {
-    year: "2022 - Present",
+    year: "2025 - Present",
+    role: "Software Engineer Intern",
+    company: "Innosoft",
+    description: `Contributing to the development of scalable web applications using Angular, React, Next.js, and TypeScript. Supporting the team in building and testing features with Playwright to ensure high-quality user experiences. Collaborating with the development team to deliver reliable and maintainable solutions.`,
+    technologies: ["React", "Next.js", "Angular", "TypeScript", "Playwright"],
+  },
+  {
+    year: "2022 - 2024",
     role: "Marketing Asistant",
     company: "Crystalat Est",
     description: `Support marketing strategies to boost brand awareness and customer engagement, while managing online storefronts and optimizing social media content. Collaborate with the team to align efforts with business goals and drive measurable growth.`,
@@ -86,18 +92,10 @@ export const PROJECTS = [
   {
     title: "Full-Stack Todo List",
     description:
-      "A ToDo List application built with React, Express, MongoDB, React Query and React Router. Users can create, edit, and delete tasks with a simple Dashboard",
-    technologies: ["React JS", "Node.js", "MongoDB" ],
+      "A full-stack ToDo List application built with React, Express, MongoDB, React Query, and React Router. Features include user authentication, allowing users to securely create, edit, and delete their own tasks through a simple and intuitive Dashboard.",
+    technologies: ["React JS", "Node.js", "MongoDB", "Authentication"],
     github: 'https://github.com/MomenRabah/Full-Stack-Todo-List.git',
-    image: todolist
-  },
-  {
-    title: "Authenticated Crud application",
-    description:
-      "A To-Do List application built with React, Supabase, React Query, and React Router. Authenticated users can create, edit, and delete their tasks.",
-    technologies: ["React JS", "Supabase", "ReactQuery"],
-    github: 'https://github.com/MomenRabah/ToDo-List-Application.git',
-    image: todolist
+    image: todolist    
   },
   {
     title: "Automotive Workshop Management System",
