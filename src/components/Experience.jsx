@@ -10,14 +10,16 @@ function Experience() {
                     <div className='w-full lg:w-1/4'>
                     <p className='mb-2 text-sm text-neutral-400'>{experience.year}</p>
                     </div>
-                    <div className='w-full max-w-xl lg:w-3/4'>
+                    <div className='flex-wrap w-full max-w-xl lg:w-3/4'>
                     <h6 className='mb-2 font-semibold'>
                         {experience.role} - <span className='text-sm'>{experience.company}</span>
                     </h6>
                     <p className='mb-4 font-light text-navy-800 tracking-tight text-justify'>{experience.description}</p>
+                    <div className='flex flex-wrap'>
                     {experience.technologies.map((tech, index)=>(
                         <span key={index} className='mr-2 mt-4 rounded bg-[#3ccf4e] px-2 py-1 text-sm font-medium text-white'>{tech}</span>
                     ))}
+                    </div>
                     </div>
                 </div>
                 ))}
