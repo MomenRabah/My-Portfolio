@@ -2,7 +2,7 @@ import workshop from '../assets/workshop.png'
 import warehouse from '../assets/Warehouses.png'
 import todolist from '../assets/Todolist.png'
 
-export const HERO_CONTENT = `Passionate Full-Stack Developer | UI/UX Enthusiast | Future Software Engineer
+export const HERO_CONTENT = `Passionate Full-Stack Developer | Future Software Engineer
 With skills in React, JavaScript, Python, Html, CSS, and a solid foundation in Node.js and MongoDB, etc. I build user-centered, efficient applications. My background in design and marketing fuels my ability to create intuitive user experiences, while my interest in AI and ML keeps me at the forefront of innovation. Let's create solutions that make a difference.`;
 
 export const ABOUT_TEXT= `I am an aspiring software developer with a strong foundation in front-end technologies, including React, JavaScript, HTML, and CSS, along with introductory experience in backend tools like Node.js, MongoDB, Supabase, and additional programming languages like Python. My background in marketing and graphic design enhances my ability to create intuitive UI/UX designs. I also have a solid grasp of AI and ML fundamentals and enjoy exploring innovative technology applications. Committed to building dynamic, scalable software, I focus on crafting solutions that drive business growth and resonate with users. Passionate about continuous learning, I strive for excellence in software engineering and impactful, user-centered experiences.`
