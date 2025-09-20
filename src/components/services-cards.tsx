@@ -1,8 +1,13 @@
 import { useLanguage } from '@/lib/language-provider';
 import { cn } from '@/lib/utils';
 import { IconBrain, IconDeviceDesktop, IconTestPipe, IconTerminal2 } from '@tabler/icons-react';
+import { motion } from 'motion/react';
 
-export default function ServicesCards() {
+interface ServicesCardsProps {
+  sectionInView?: boolean;
+}
+
+export default function ServicesCards({ sectionInView = true }: ServicesCardsProps) {
   const { t } = useLanguage();
   const features = [
     {
@@ -29,7 +34,13 @@ export default function ServicesCards() {
   return (
     <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-4">
       {features.map((feature, index) => (
-        <Feature key={feature.title} {...feature} index={index} />
+        <Feature 
+          key={feature.title} 
+          {...feature} 
+          index={index} 
+          sectionInView={sectionInView} 
+          delay={0.2 + index * 0.1} 
+        />
       ))}
     </div>
   );
@@ -40,19 +51,26 @@ const Feature = ({
   description,
   icon,
   index,
+  sectionInView,
+  delay,
 }: {
   title: string;
   description: string;
   icon: React.ReactNode;
   index: number;
+  sectionInView?: boolean;
+  delay?: number;
 }) => {
   return (
-    <div
+    <motion.div
       className={cn(
         'group/feature relative flex flex-col py-10 lg:border-r dark:border-neutral-800',
         (index === 0 || index === 4) && 'lg:border-l dark:border-neutral-800',
         index < 4 && 'lg:border-b dark:border-neutral-800'
       )}
+      initial={{ opacity: 0, y: 20 }}
+      animate={sectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6, delay: delay || 0.2 }}
     >
       {index < 4 && (
         <div className="pointer-events-none absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 to-transparent opacity-0 transition duration-200 group-hover/feature:opacity-100 dark:from-neutral-800" />
@@ -70,6 +88,6 @@ const Feature = ({
       <p className="relative z-10 max-w-xs px-10 text-justify text-sm text-neutral-600 dark:text-neutral-300">
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 };

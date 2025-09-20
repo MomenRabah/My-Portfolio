@@ -10,7 +10,7 @@ interface TimelineEntry {
   content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({ data, isInView = true }: { data: TimelineEntry[], isInView?: boolean }) => {
   const { t } = useLanguage();
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,14 +33,25 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="relative z-50 flex w-full max-w-4xl flex-col gap-16" ref={containerRef}>
-      <div className="flex flex-col items-start justify-center px-8 text-start md:items-center md:px-8 md:text-center lg:px-10">
+      <motion.div 
+        className="flex flex-col items-start justify-center px-8 text-start md:items-center md:px-8 md:text-center lg:px-10"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+      >
         <h2 className="text-primary mb-4 text-2xl font-bold md:text-4xl">{t('experienceTitle')}</h2>
         <p className="text-muted-foreground md:text-lx text-lg">{t('experienceDescription')}</p>
-      </div>
+      </motion.div>
 
       <div ref={ref} className="relative flex flex-col gap-18">
         {data.map((item, index) => (
-          <div key={index} className="flex justify-start md:gap-10">
+          <motion.div 
+            key={index} 
+            className="flex justify-start md:gap-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.7, delay: 0.2 + index * 0.1 }}
+          >
             <div className="sticky top-40 z-40 mt-16 flex max-w-3xs flex-col items-center self-start ps-20 md:mt-0 md:w-full ltr:justify-start md:ltr:flex-row rtl:justify-end md:rtl:flex-row-reverse">
               <div className="absolute flex h-10 w-10 items-center justify-center rounded-full bg-white ltr:left-3 rtl:right-3 dark:bg-black">
                 <div className="h-4 w-4 rounded-full border border-neutral-300 bg-neutral-200 p-2 dark:border-neutral-700 dark:bg-neutral-800" />
@@ -60,7 +71,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </div>
               {item.content}{' '}
             </div>
-          </div>
+          </motion.div>
         ))}
         <div
           style={{

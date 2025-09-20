@@ -1,8 +1,12 @@
 import { useLanguage } from '../../lib/language-provider';
+import { motion, useInView } from 'motion/react';
+import { useRef } from 'react';
 import { Timeline } from '../ui/timeline';
 
 function Experience() {
   const { t } = useLanguage();
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: false, margin: '-100px' });
   const experienceData = [
     {
       title: 'Innosoft SA',
@@ -67,8 +71,15 @@ function Experience() {
   ];
 
   return (
-    <div className="flex items-center justify-center">
-      <Timeline data={experienceData} />
+    <div className="flex items-center justify-center" ref={sectionRef}>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="flex items-center justify-center"
+      >
+        <Timeline data={experienceData} isInView={isInView} />
+      </motion.div>
     </div>
   );
 }
